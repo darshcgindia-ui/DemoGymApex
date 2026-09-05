@@ -1,0 +1,454 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TOP FITNESS | Premier High-Performance Athletic Gym | India</title>
+  <link rel="stylesheet" href="../css/top-fitness.css">
+</head>
+<body>
+
+  <!-- Ambient Glowing Background Orbs -->
+  <div class="ambient-glow-orb orb-lime"></div>
+  <div class="ambient-glow-orb orb-cyan"></div>
+
+  <!-- Top Ambient Occupancy Bar -->
+  <div class="tf-top-bar">
+    <div class="occupancy-pill">
+      <span class="pulse-dot"></span>
+      <span id="occupancyCounter">42 ATHLETES ACTIVE</span>
+      <span>• AIR CONDITIONED FACILITY OPEN</span>
+    </div>
+    <div style="color: var(--tf-text-dim);">
+      📍 Plot 18, India Main Road • ⏰ 5:30 AM – 10:30 PM
+    </div>
+  </div>
+
+  <!-- Sticky Glassmorphism Header -->
+  <header class="tf-header">
+    <div class="container tf-nav-container">
+      <a href="top-fitness.html" class="tf-logo">
+        TOP<span>FITNESS</span> ⚡
+      </a>
+
+      <nav>
+        <ul class="tf-nav-links">
+          <li><a href="#facility">Arena</a></li>
+          <li><a href="#calculator">BMI Engine</a></li>
+          <li><a href="#plans">Memberships</a></li>
+          <li><a href="#trainers">Coaches</a></li>
+          <li><a href="#schedule">Schedule</a></li>
+        </ul>
+      </nav>
+
+      <div>
+        <a href="#pass" class="tf-btn tf-btn-primary">
+          Claim 1-Day Pass 🔥
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Kinetic Hero Section -->
+  <section class="tf-hero">
+    <div class="container tf-hero-grid">
+      <div class="tf-reveal">
+        <div class="tf-hero-tag">
+          ⚡ India'S #1 HIGH-PERFORMANCE TRAINING CLUB
+        </div>
+        <h1>
+          BUILD AN <br>
+          <span class="neon-text">UNBREAKABLE</span> <br>
+          PHYSIQUE.
+        </h1>
+        <p>
+          World-class Hammer Strength & Olympic lifting equipment, specialized certified conditioning coaches, and structured body transformation architecture. No generic gym machines. Just pure, disciplined results.
+        </p>
+
+        <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+          <a href="#plans" class="tf-btn tf-btn-primary" style="padding: 0.9rem 1.8rem; font-size: 0.92rem;">
+            Explore Memberships (From ₹1,499) →
+          </a>
+          <a href="top-fitness-barbell.html" target="_blank" class="tf-btn tf-btn-outline" style="padding: 0.9rem 1.8rem; font-size: 0.92rem; border-color: #00d6ff; color: #00d6ff; background: rgba(0, 214, 255, 0.08); box-shadow: 0 0 15px rgba(0,214,255,0.2);">
+            ★ Inspect Flagship Barbell Reveal ↗
+          </a>
+        </div>
+
+        <div class="tf-hero-stats-row tf-reveal stagger-1">
+          <div class="tf-stat-item">
+            <h4><span class="tf-count-up" data-target="12000" data-suffix="+">12,000+</span></h4>
+            <span>Sq.Ft Heavy Training Arena</span>
+          </div>
+          <div class="tf-stat-item">
+            <h4><span class="tf-count-up" data-target="15" data-suffix="+">15+</span></h4>
+            <span>Certified Elite Coaches</span>
+          </div>
+          <div class="tf-stat-item">
+            <h4><span class="tf-count-up" data-target="1400" data-suffix="+">1,400+</span></h4>
+            <span>Transformations across India</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- In-Hero VIP Pass Reservation Card with 3D Tilt -->
+      <div class="tf-pass-card tilt-3d tf-reveal stagger-2" id="pass">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
+          <span style="font-family: var(--tf-font-mono); font-size: 0.75rem; color: var(--tf-lime-glow); font-weight: 800; text-transform: uppercase;">
+            🎟️ 100% FREE VIP TRIAL
+          </span>
+          <span style="font-size: 0.75rem; color: var(--tf-text-dim);">NO CARD REQUIRED</span>
+        </div>
+        <h3>Book Free 1-Day Pass</h3>
+        <p>Experience full equipment access, steam bath, and personal trainer assessment.</p>
+
+        <form id="trialPassForm">
+          <div class="tf-input-group">
+            <label>Athlete Name</label>
+            <input type="text" id="passName" placeholder="e.g. Aman Sharma" required>
+          </div>
+
+          <div class="tf-input-group">
+            <label>WhatsApp Contact Number</label>
+            <input type="tel" id="passPhone" placeholder="e.g. +91 98765 43210" required>
+          </div>
+
+          <div class="tf-input-group">
+            <label>Primary Transformation Objective</label>
+            <select id="passGoal">
+              <option value="Hypertrophy">Hypertrophy & Muscle Building</option>
+              <option value="FatLoss">Intense Fat Loss & Conditioning</option>
+              <option value="Strength">Powerlifting & Athletic Strength</option>
+              <option value="General">Cardio & General Fitness</option>
+            </select>
+          </div>
+
+          <button type="submit" class="tf-btn tf-btn-primary" style="width: 100%; padding: 0.95rem; margin-top: 0.5rem;">
+            Claim Free 1-Day VIP Pass 🔥
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Kinetic Athletic Ticker Strip -->
+  <div class="tf-ticker">
+    <div class="tf-ticker-track">
+      <span>★</span> HEAVY OLYMPIC LIFTING <span>★</span> CROSSFIT RIGS <span>★</span> BIO-IMPEDANCE INBODY SCANS <span>★</span> STEAM & SAUNA <span>★</span> CERTIFIED NUTRITIONISTS <span>★</span> HYPERTROPHY ARCHITECTURE <span>★</span>
+      <span>★</span> HEAVY OLYMPIC LIFTING <span>★</span> CROSSFIT RIGS <span>★</span> BIO-IMPEDANCE INBODY SCANS <span>★</span> STEAM & SAUNA <span>★</span> CERTIFIED NUTRITIONISTS <span>★</span> HYPERTROPHY ARCHITECTURE <span>★</span>
+    </div>
+  </div>
+
+  <!-- 3D Dark Facility Arena Showcase Gallery -->
+  <section class="tf-facility-section" id="facility">
+    <div class="container">
+      <div class="tf-section-head tf-reveal">
+        <span style="font-family: var(--tf-font-mono); color: var(--tf-lime-glow); font-size: 0.82rem; font-weight: 700; text-transform: uppercase;">
+          World-Class Training Infrastructure
+        </span>
+        <h2>Inside the Top Fitness Arena</h2>
+        <p style="color: var(--tf-text-muted); max-width: 600px; margin: 0.5rem auto 0;">
+          Engineered without compromise: Eleiko competition barbells, calibrated steel plates, and recovery suites.
+        </p>
+      </div>
+
+      <div class="tf-facility-grid">
+        <!-- 1 -->
+        <div class="tf-facility-card tilt-3d tf-reveal stagger-1">
+          <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?q=80&w=800&auto=format&fit=crop" class="tf-facility-img" alt="Heavy Free Weights & Power Racks">
+          <div class="tf-facility-overlay">
+            <h4>Heavy Strength Zone</h4>
+            <span>6x Power Racks • Dumbbells up to 60kg</span>
+          </div>
+        </div>
+
+        <!-- 2 -->
+        <div class="tf-facility-card tilt-3d tf-reveal stagger-2">
+          <img src="https://images.unsplash.com/photo-1517838277536-f5f99be501cd?q=80&w=800&auto=format&fit=crop" class="tf-facility-img" alt="Olympic Lifting & Crossfit Rigs">
+          <div class="tf-facility-overlay">
+            <h4>Olympic Lifting Platforms</h4>
+            <span>Eleiko Barbells • Bumper Plates • Turf Track</span>
+          </div>
+        </div>
+
+        <!-- 3 -->
+        <div class="tf-facility-card tilt-3d tf-reveal stagger-3">
+          <img src="https://images.unsplash.com/photo-1540497077202-7c8a3999166f?q=80&w=800&auto=format&fit=crop" class="tf-facility-img" alt="Cardio & Recovery Theater">
+          <div class="tf-facility-overlay">
+            <h4>Cardio & Steam Suite</h4>
+            <span>Matrix Curved Treadmills • Finnish Sauna</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Workout & BMI / Calorie Target Engine -->
+  <section class="tf-calc-section" id="calculator">
+    <div class="container">
+      <div class="tf-section-head tf-reveal">
+        <span style="font-family: var(--tf-font-mono); color: var(--tf-cyan-glow); font-size: 0.82rem; font-weight: 700; text-transform: uppercase;">
+          Interactive Biometrics Engine
+        </span>
+        <h2>Calculate Your Target Daily Nutrition</h2>
+        <p style="color: var(--tf-text-muted); max-width: 600px; margin: 0.5rem auto 0;">
+          Dial in your body statistics to compute your baseline Body Mass Index (BMI) and customized daily caloric intake target.
+        </p>
+      </div>
+
+      <div class="tf-calc-card tilt-3d tf-reveal stagger-1">
+        <div>
+          <h3 style="font-size: 1.4rem; margin-bottom: 1.25rem;">Input Body Statistics</h3>
+          
+          <div class="tf-input-group">
+            <label>Body Weight (Kilograms)</label>
+            <input type="number" id="calcWeight" value="75" min="40" max="180">
+          </div>
+
+          <div class="tf-input-group">
+            <label>Height (Centimeters)</label>
+            <input type="number" id="calcHeight" value="175" min="120" max="230">
+          </div>
+
+          <div class="tf-input-group">
+            <label>Primary Fitness Target</label>
+            <select id="calcGoal">
+              <option value="muscle">Hypertrophy (Lean Muscle Surplus)</option>
+              <option value="fatloss">Aggressive Fat Loss (Caloric Deficit)</option>
+              <option value="endurance">Athletic Performance & Maintenance</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="tf-calc-result-box">
+          <span style="font-family: var(--tf-font-mono); font-size: 0.78rem; font-weight: 700; text-transform: uppercase; color: var(--tf-text-muted);">
+            Computed Body Mass Index
+          </span>
+          <div class="tf-calc-number" id="bmiValueDisplay">24.5</div>
+          <div style="font-family: var(--tf-font-mono); font-weight: 800; font-size: 1rem; margin-bottom: 1.5rem;" id="bmiStatusDisplay">
+            Normal & Fit
+          </div>
+
+          <div style="border-top: 1px solid var(--tf-border); padding-top: 1.25rem;">
+            <span style="font-family: var(--tf-font-mono); font-size: 0.78rem; color: var(--tf-text-muted); text-transform: uppercase;">
+              Recommended Daily Caloric Target:
+            </span>
+            <div style="font-family: var(--tf-font-display); font-size: 1.75rem; font-weight: 900; color: var(--tf-lime-glow); margin-top: 0.35rem;" id="caloricTargetDisplay">
+              2,870 kcal/day
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Standardized Membership Rate Card (₹ INR) -->
+  <section class="tf-plans-section" id="plans">
+    <div class="container">
+      <div class="tf-section-head tf-reveal">
+        <span style="font-family: var(--tf-font-mono); color: var(--tf-lime-glow); font-size: 0.82rem; font-weight: 700; text-transform: uppercase;">
+          Transparent Rate Card
+        </span>
+        <h2>High-Performance Memberships (INR)</h2>
+        <p style="color: var(--tf-text-muted);">Zero hidden registration fees. Complete access to weights, cardio theater, and steam suite.</p>
+      </div>
+
+      <div class="tf-plans-grid">
+        <!-- Plan 1 -->
+        <div class="tf-plan-card tilt-3d tf-reveal stagger-1">
+          <div>
+            <span style="font-family: var(--tf-font-mono); font-size: 0.8rem; font-weight: 700; color: var(--tf-text-muted); text-transform: uppercase;">
+              Starter Sprint
+            </span>
+            <h3 style="font-size: 1.5rem; margin-top: 0.25rem;">1-Month Membership</h3>
+            <div class="tf-plan-price">₹1,499</div>
+            <div style="font-size: 0.8rem; color: var(--tf-text-dim);">Monthly renewal • No lock-in contract</div>
+
+            <ul class="tf-plan-features">
+              <li><span>✓</span> Full Heavy Strength & Cardio Access</li>
+              <li><span>✓</span> Locker & Shower Access</li>
+              <li><span>✓</span> General Workout Routine Chart</li>
+              <li><span>✓</span> 1x InBody Bio-Impedance Scan</li>
+            </ul>
+          </div>
+
+          <a href="#pass" class="tf-btn tf-btn-outline" style="width: 100%;">
+            Join 1-Month Tier
+          </a>
+        </div>
+
+        <!-- Plan 2: Transformation (Featured) -->
+        <div class="tf-plan-card featured tilt-3d tf-reveal stagger-2">
+          <span class="tf-badge-popular">Most Popular</span>
+          <div>
+            <span style="font-family: var(--tf-font-mono); font-size: 0.8rem; font-weight: 700; color: var(--tf-lime-glow); text-transform: uppercase;">
+              Guaranteed Results
+            </span>
+            <h3 style="font-size: 1.5rem; margin-top: 0.25rem;">3-Month Transformation</h3>
+            <div class="tf-plan-price" style="color: var(--tf-lime-glow);">₹3,799</div>
+            <div style="font-size: 0.8rem; color: var(--tf-text-muted);">₹1,266/month equivalent • Save ₹700</div>
+
+            <ul class="tf-plan-features">
+              <li><span>✓</span> Complete Gym & Crossfit Rig Access</li>
+              <li><span>✓</span> Personalized Indian Diet & Nutrition Chart</li>
+              <li><span>✓</span> Monthly InBody Progress Tracking</li>
+              <li><span>✓</span> Weekly Steam & Sauna Recovery Suite</li>
+              <li><span>✓</span> 1-on-1 Personal Trainer Orientation</li>
+            </ul>
+          </div>
+
+          <a href="#pass" class="tf-btn tf-btn-primary" style="width: 100%;">
+            Start 90-Day Sprint 🔥
+          </a>
+        </div>
+
+        <!-- Plan 3 -->
+        <div class="tf-plan-card tilt-3d tf-reveal stagger-3">
+          <div>
+            <span style="font-family: var(--tf-font-mono); font-size: 0.8rem; font-weight: 700; color: var(--tf-text-muted); text-transform: uppercase;">
+              VIP Athlete
+            </span>
+            <h3 style="font-size: 1.5rem; margin-top: 0.25rem;">1-Year Elite Pass</h3>
+            <div class="tf-plan-price">₹11,999</div>
+            <div style="font-size: 0.8rem; color: var(--tf-text-dim);">₹999/month equivalent • 0% EMI Available</div>
+
+            <ul class="tf-plan-features">
+              <li><span>✓</span> Unlimited 365-Day Gym Access</li>
+              <li><span>✓</span> 3x Guest Passes Per Quarter</li>
+              <li><span>✓</span> Dedicated VIP Locker & Kit Storage</li>
+              <li><span>✓</span> Unlimited Steam Bath Sessions</li>
+              <li><span>✓</span> 2-Month Membership Pause Option</li>
+            </ul>
+          </div>
+
+          <a href="#pass" class="tf-btn tf-btn-outline" style="width: 100%;">
+            Acquire Annual Pass
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Certified Trainer Roster -->
+  <section class="tf-calc-section" id="trainers">
+    <div class="container">
+      <div class="tf-section-head tf-reveal">
+        <span style="font-family: var(--tf-font-mono); color: var(--tf-cyan-glow); font-size: 0.82rem; font-weight: 700; text-transform: uppercase;">
+          Specialized Coaching Squad
+        </span>
+        <h2>Meet the Head Coaches</h2>
+        <p style="color: var(--tf-text-muted);">Certified strength specialists dedicated to lifting form, injury prevention, and athletic performance.</p>
+      </div>
+
+      <div class="tf-trainers-grid">
+        <!-- Coach 1 -->
+        <div class="tf-trainer-card tilt-3d tf-reveal stagger-1">
+          <img src="https://images.unsplash.com/photo-1567013127542-490d757e51fc?q=80&w=800&auto=format&fit=crop" class="tf-trainer-img" alt="Vikram Singh Head Coach">
+          <div class="tf-trainer-body">
+            <div class="tf-trainer-spec">Head Strength & Power Coach</div>
+            <h4>Vikram Singh</h4>
+            <p style="font-size: 0.85rem; color: var(--tf-text-muted);">National Powerlifting Gold Medalist. 10+ years specializing in barbell mechanics, squats, and Olympic lifts.</p>
+          </div>
+        </div>
+
+        <!-- Coach 2 -->
+        <div class="tf-trainer-card tilt-3d tf-reveal stagger-2">
+          <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=800&auto=format&fit=crop" class="tf-trainer-img" alt="Priya Agrawal Nutrition Coach">
+          <div class="tf-trainer-body">
+            <div class="tf-trainer-spec">Clinical Nutritionist & HIIT</div>
+            <h4>Priya Agrawal</h4>
+            <p style="font-size: 0.85rem; color: var(--tf-text-muted);">Certified Sports Dietitian. Specializes in female hormone balance, visceral fat reduction, and Indian macro planning.</p>
+          </div>
+        </div>
+
+        <!-- Coach 3 -->
+        <div class="tf-trainer-card tilt-3d tf-reveal stagger-3">
+          <img src="https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?q=80&w=800&auto=format&fit=crop" class="tf-trainer-img" alt="Rohan Verma Hypertrophy Coach">
+          <div class="tf-trainer-body">
+            <div class="tf-trainer-spec">Hypertrophy & Conditioning</div>
+            <h4>Rohan Verma</h4>
+            <p style="font-size: 0.85rem; color: var(--tf-text-muted);">Bodybuilding & hypertrophy specialist. Trained over 450+ physical transformations across India.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Class Schedule -->
+  <section class="tf-schedule-wrap" id="schedule">
+    <div class="container">
+      <div class="tf-section-head tf-reveal">
+        <span style="font-family: var(--tf-font-mono); color: var(--tf-lime-glow); font-size: 0.82rem; font-weight: 700; text-transform: uppercase;">
+          Group Training Program
+        </span>
+        <h2>Weekly Class Schedule</h2>
+      </div>
+
+      <div style="display: flex; gap: 0.6rem; justify-content: center; flex-wrap: wrap;" class="tf-reveal stagger-1">
+        <button class="tf-btn tf-btn-outline tf-schedule-filter-btn active" data-filter="all" style="padding: 0.5rem 1rem; font-size: 0.78rem;">All Classes</button>
+        <button class="tf-btn tf-btn-outline tf-schedule-filter-btn" data-filter="hiit" style="padding: 0.5rem 1rem; font-size: 0.78rem;">HIIT & Cardio</button>
+        <button class="tf-btn tf-btn-outline tf-schedule-filter-btn" data-filter="strength" style="padding: 0.5rem 1rem; font-size: 0.78rem;">Heavy Strength</button>
+        <button class="tf-btn tf-btn-outline tf-schedule-filter-btn" data-filter="crossfit" style="padding: 0.5rem 1rem; font-size: 0.78rem;">Crossfit Rig</button>
+      </div>
+
+      <table class="tf-schedule-table tf-reveal stagger-2">
+        <thead>
+          <tr>
+            <th>Time Slot</th>
+            <th>Class Name</th>
+            <th>Category</th>
+            <th>Coach</th>
+            <th>Intensity</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="tf-schedule-row" data-category="hiit">
+            <td style="font-family: var(--tf-font-mono); font-weight: 700;">6:30 AM - 7:30 AM</td>
+            <td><strong>Morning Inferno HIIT</strong></td>
+            <td><span style="color: var(--tf-cyan-glow);">HIIT</span></td>
+            <td>Priya Agrawal</td>
+            <td>🔥 Extreme</td>
+          </tr>
+          <tr class="tf-schedule-row" data-category="strength">
+            <td style="font-family: var(--tf-font-mono); font-weight: 700;">8:00 AM - 9:00 AM</td>
+            <td><strong>Barbell Squat & Deadlift Clinic</strong></td>
+            <td><span style="color: var(--tf-lime-glow);">Strength</span></td>
+            <td>Vikram Singh</td>
+            <td>⚡ Heavy</td>
+          </tr>
+          <tr class="tf-schedule-row" data-category="crossfit">
+            <td style="font-family: var(--tf-font-mono); font-weight: 700;">6:00 PM - 7:00 PM</td>
+            <td><strong>Crossfit WOD & Kettlebell Rigs</strong></td>
+            <td><span style="color: var(--tf-orange);">Crossfit</span></td>
+            <td>Rohan Verma</td>
+            <td>🔥 Extreme</td>
+          </tr>
+          <tr class="tf-schedule-row" data-category="hiit">
+            <td style="font-family: var(--tf-font-mono); font-weight: 700;">7:30 PM - 8:30 PM</td>
+            <td><strong>Evening Fat Shred & Core</strong></td>
+            <td><span style="color: var(--tf-cyan-glow);">HIIT</span></td>
+            <td>Priya Agrawal</td>
+            <td>⚡ Moderate</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="tf-footer">
+    <div class="container">
+      <div class="tf-logo" style="justify-content: center; margin-bottom: 1rem;">
+        TOP<span>FITNESS</span> ⚡
+      </div>
+      <p style="font-size: 0.9rem; color: var(--tf-text-muted); max-width: 600px; margin: 0 auto 1.5rem;">
+        Pan India â€” Remote & On-Site Delivery • Helpline: +91 97550 99881
+      </p>
+      <div style="font-size: 0.8rem; color: var(--tf-text-dim);">
+        © 2026 Top Fitness India. Built with ApexLocal Studio Customer Acquisition Engine.
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/top-fitness.js"></script>
+</body>
+</html>
