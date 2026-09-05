@@ -1,0 +1,718 @@
+/* ==========================================================================
+   TOP FITNESS — ULTRA-PREMIUM OBSIDIAN 3D ATHLETIC STYLESHEET
+   Aesthetic: Midnight Black Surfaces (#030407), Neon Cyberpunk Lasers, 3D Tilt Physics, 60fps Motion
+   ========================================================================== */
+
+@import url('https://api.fontshare.com/v2/css?f[]=clash-display@600,700,800,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Syne:wght@800;900&display=swap');
+
+:root {
+  --tf-bg: #030407;
+  --tf-surface: #080b12;
+  --tf-surface-elevated: #0e1320;
+  --tf-surface-card: #0b0f19;
+  
+  --tf-text: #f8fafc;
+  --tf-text-muted: #94a3b8;
+  --tf-text-dim: #475569;
+  
+  --tf-lime: #10b981;
+  --tf-lime-glow: #34d399;
+  --tf-cyan: #06b6d4;
+  --tf-cyan-glow: #38bdf8;
+  --tf-orange: #f97316;
+  
+  --tf-border: rgba(255, 255, 255, 0.08);
+  --tf-border-active: var(--tf-lime);
+  
+  --tf-font-display: 'Clash Display', 'Syne', sans-serif;
+  --tf-font-sans: 'Plus Jakarta Sans', sans-serif;
+  --tf-font-mono: 'IBM Plex Mono', monospace;
+  
+  --tf-radius-sm: 4px;
+  --tf-radius-md: 8px;
+  --tf-radius-lg: 14px;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--tf-bg);
+  color: var(--tf-text);
+  font-family: var(--tf-font-sans);
+  line-height: 1.75;
+  overflow-x: hidden;
+  background-image: 
+    radial-gradient(rgba(16, 185, 129, 0.04) 1px, transparent 1px),
+    radial-gradient(rgba(6, 182, 212, 0.03) 1px, transparent 1px);
+  background-size: 36px 36px, 72px 72px;
+}
+
+/* Ambient Glowing Background Light Orbs */
+.ambient-glow-orb {
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  filter: blur(140px);
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.25;
+}
+
+.orb-lime {
+  background: radial-gradient(circle, var(--tf-lime) 0%, transparent 70%);
+  top: 10%;
+  left: -100px;
+}
+
+.orb-cyan {
+  background: radial-gradient(circle, var(--tf-cyan) 0%, transparent 70%);
+  top: 45%;
+  right: -100px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--tf-font-display);
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  line-height: 1.1;
+  color: #ffffff;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  box-sizing: border-box;
+  position: relative;
+  z-index: 1;
+}
+
+/* Scroll Reveal System */
+.tf-reveal {
+  opacity: 0;
+  transform: translateY(35px);
+  transition: opacity 0.85s cubic-bezier(0.16, 1, 0.3, 1), transform 0.85s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+.tf-reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.stagger-1 { transition-delay: 0.1s; }
+.stagger-2 { transition-delay: 0.2s; }
+.stagger-3 { transition-delay: 0.3s; }
+.stagger-4 { transition-delay: 0.4s; }
+
+/* Top Live Occupancy Bar */
+.tf-top-bar {
+  background: rgba(8, 11, 18, 0.95);
+  border-bottom: 1px solid var(--tf-border);
+  padding: 0.55rem 1.25rem;
+  font-family: var(--tf-font-mono);
+  font-size: 0.78rem;
+  font-weight: 700;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.occupancy-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--tf-lime-glow);
+}
+
+.pulse-dot {
+  width: 8px;
+  height: 8px;
+  background-color: var(--tf-lime);
+  border-radius: 50%;
+  box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7);
+  animation: pulseBeacon 2s infinite;
+}
+
+@keyframes pulseBeacon {
+  0% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7); }
+  70% { box-shadow: 0 0 0 8px rgba(16, 185, 129, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0); }
+}
+
+/* Navigation Header */
+.tf-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(3, 4, 7, 0.9);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--tf-border);
+  padding: 1.2rem 0;
+}
+
+.tf-nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.tf-logo {
+  font-family: var(--tf-font-display);
+  font-size: 1.5rem;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+}
+
+.tf-logo span {
+  color: var(--tf-lime);
+  text-shadow: 0 0 15px rgba(16, 185, 129, 0.6);
+}
+
+.tf-nav-links {
+  display: flex;
+  gap: 2.25rem;
+  list-style: none;
+}
+
+.tf-nav-links a {
+  color: var(--tf-text-muted);
+  text-decoration: none;
+  font-size: 0.88rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  transition: color 0.2s ease, text-shadow 0.2s ease;
+}
+
+.tf-nav-links a:hover {
+  color: var(--tf-lime-glow);
+  text-shadow: 0 0 10px rgba(52, 211, 153, 0.5);
+}
+
+.tf-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  padding: 0.85rem 1.75rem;
+  font-family: var(--tf-font-sans);
+  font-size: 0.88rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  border-radius: var(--tf-radius-sm);
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  border: 2px solid transparent;
+  position: relative;
+  overflow: hidden;
+}
+
+.tf-btn-primary {
+  background: var(--tf-lime);
+  color: #000000;
+  box-shadow: 0 0 25px rgba(16, 185, 129, 0.4), 4px 4px 0px #000000;
+  border-color: #ffffff;
+}
+
+.tf-btn-primary:hover {
+  background: #34d399;
+  transform: translate(-3px, -3px);
+  box-shadow: 0 0 35px rgba(16, 185, 129, 0.7), 7px 7px 0px #000000;
+}
+
+.tf-btn-outline {
+  background: rgba(255,255,255,0.03);
+  color: #ffffff;
+  border: 2px solid var(--tf-border);
+  box-shadow: 4px 4px 0px #000000;
+  backdrop-filter: blur(10px);
+}
+
+.tf-btn-outline:hover {
+  border-color: var(--tf-cyan);
+  color: var(--tf-cyan-glow);
+  transform: translate(-3px, -3px);
+  box-shadow: 0 0 25px rgba(6, 182, 212, 0.4), 7px 7px 0px #000000;
+}
+
+/* 3D Interactive Tilt Card Base */
+.tilt-3d {
+  transform-style: preserve-3d;
+  perspective: 1000px;
+  transition: transform 0.15s ease-out, box-shadow 0.25s ease-out, border-color 0.25s ease-out;
+  will-change: transform;
+}
+
+/* Kinetic Hero Section */
+.tf-hero {
+  position: relative;
+  padding: clamp(5.5rem, 10vw, 9.5rem) 0 6rem;
+  background: 
+    linear-gradient(180deg, rgba(3, 4, 7, 0.85) 0%, rgba(3, 4, 7, 0.98) 100%),
+    url('https://images.unsplash.com/photo-1534438327276-14e5300c3a48?q=80&w=1600&auto=format&fit=crop') center/cover no-repeat;
+  border-bottom: 2px solid var(--tf-border);
+}
+
+.tf-hero-grid {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 3.5rem;
+  align-items: center;
+}
+
+.tf-hero-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: rgba(16, 185, 129, 0.12);
+  color: var(--tf-lime-glow);
+  border: 1px solid rgba(16, 185, 129, 0.35);
+  padding: 0.45rem 1.15rem;
+  border-radius: 999px;
+  font-family: var(--tf-font-mono);
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 1.75rem;
+  box-shadow: 0 0 20px rgba(16, 185, 129, 0.2);
+}
+
+.tf-hero h1 {
+  font-size: clamp(2.6rem, 5.8vw, 4.8rem);
+  letter-spacing: 0.05em;
+  margin-bottom: 1.35rem;
+}
+
+.tf-hero h1 .neon-text {
+  color: transparent;
+  -webkit-text-stroke: 1.5px var(--tf-lime);
+  filter: drop-shadow(0 0 15px rgba(16, 185, 129, 0.4));
+}
+
+.tf-hero p {
+  color: var(--tf-text-muted);
+  font-size: 1.12rem;
+  line-height: 1.85;
+  margin-bottom: 2.5rem;
+  max-width: 580px;
+}
+
+.tf-hero-stats-row {
+  display: flex;
+  gap: 2.5rem;
+  margin-top: 2.75rem;
+  padding-top: 2.25rem;
+  border-top: 1px solid var(--tf-border);
+  flex-wrap: wrap;
+}
+
+.tf-stat-item h4 {
+  font-size: 2.2rem;
+  color: var(--tf-lime-glow);
+  margin-bottom: 0.2rem;
+  text-shadow: 0 0 20px rgba(52, 211, 153, 0.4);
+}
+
+.tf-stat-item span {
+  font-size: 0.8rem;
+  font-family: var(--tf-font-mono);
+  color: var(--tf-text-muted);
+  text-transform: uppercase;
+}
+
+/* Hero Live Workout Pass Card with 3D Border Glow */
+.tf-pass-card {
+  background: var(--tf-surface);
+  border: 2px solid var(--tf-lime);
+  border-radius: var(--tf-radius-lg);
+  padding: 2.5rem 2.25rem;
+  box-shadow: 0 0 45px rgba(16, 185, 129, 0.18), 8px 8px 0px #000000;
+  position: relative;
+}
+
+.tf-pass-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.4rem;
+}
+
+.tf-pass-card p {
+  font-size: 0.88rem;
+  color: var(--tf-text-muted);
+  margin-bottom: 1.5rem;
+}
+
+.tf-input-group {
+  margin-bottom: 1.1rem;
+}
+
+.tf-input-group label {
+  display: block;
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--tf-text-muted);
+  margin-bottom: 0.35rem;
+  font-family: var(--tf-font-mono);
+}
+
+.tf-input-group input, .tf-input-group select {
+  width: 100%;
+  padding: 0.8rem 1rem;
+  background: var(--tf-bg);
+  border: 1px solid var(--tf-border);
+  border-radius: var(--tf-radius-sm);
+  color: #ffffff;
+  font-family: var(--tf-font-sans);
+  font-size: 0.92rem;
+  outline: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.tf-input-group input:focus, .tf-input-group select:focus {
+  border-color: var(--tf-lime);
+  box-shadow: 0 0 15px rgba(16, 185, 129, 0.35);
+}
+
+/* Kinetic Athletic Ticker Strip */
+.tf-ticker {
+  background: #000000;
+  border-top: 2px solid var(--tf-lime);
+  border-bottom: 2px solid var(--tf-lime);
+  padding: 0.95rem 0;
+  overflow: hidden;
+  white-space: nowrap;
+  box-shadow: 0 0 25px rgba(16, 185, 129, 0.25);
+}
+
+.tf-ticker-track {
+  display: inline-flex;
+  gap: 2.5rem;
+  animation: tickerScroll 24s linear infinite;
+  font-family: var(--tf-font-display);
+  font-size: 1.15rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.tf-ticker-track span {
+  color: var(--tf-lime);
+  text-shadow: 0 0 10px rgba(16, 185, 129, 0.5);
+}
+
+@keyframes tickerScroll {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+/* Interactive Workout / BMI Calculator Section */
+.tf-calc-section {
+  padding: 6.5rem 0;
+  background: var(--tf-surface);
+  border-bottom: 1px solid var(--tf-border);
+  position: relative;
+}
+
+.tf-calc-card {
+  background: var(--tf-bg);
+  border: 2px solid var(--tf-border);
+  border-radius: var(--tf-radius-lg);
+  padding: 2.75rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3.5rem;
+  align-items: center;
+  box-shadow: 8px 8px 0px #000000;
+}
+
+.tf-calc-result-box {
+  background: var(--tf-surface-elevated);
+  border: 2px solid var(--tf-cyan);
+  border-radius: var(--tf-radius-md);
+  padding: 2.25rem;
+  text-align: center;
+  box-shadow: 0 0 35px rgba(6, 182, 212, 0.2);
+}
+
+.tf-calc-number {
+  font-family: var(--tf-font-display);
+  font-size: 3.8rem;
+  font-weight: 900;
+  color: var(--tf-cyan-glow);
+  line-height: 1;
+  margin: 0.5rem 0;
+  text-shadow: 0 0 25px rgba(56, 189, 248, 0.5);
+}
+
+/* 3D Facility Photo Showcase Gallery */
+.tf-facility-section {
+  padding: 6.5rem 0;
+  background: var(--tf-bg);
+  border-bottom: 1px solid var(--tf-border);
+}
+
+.tf-facility-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 1.75rem;
+}
+
+.tf-facility-card {
+  position: relative;
+  border-radius: var(--tf-radius-lg);
+  overflow: hidden;
+  border: 1px solid var(--tf-border);
+  height: 320px;
+  box-shadow: 6px 6px 0px #000000;
+  cursor: pointer;
+}
+
+.tf-facility-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1), filter 0.6s ease;
+  filter: brightness(0.8);
+}
+
+.tf-facility-card:hover .tf-facility-img {
+  transform: scale(1.08);
+  filter: brightness(1);
+}
+
+.tf-facility-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 2rem 1.5rem 1.5rem;
+  background: linear-gradient(to top, rgba(3, 4, 7, 0.95) 0%, transparent 100%);
+}
+
+.tf-facility-overlay h4 {
+  font-size: 1.3rem;
+  margin-bottom: 0.25rem;
+}
+
+.tf-facility-overlay span {
+  font-family: var(--tf-font-mono);
+  font-size: 0.78rem;
+  color: var(--tf-lime-glow);
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+/* Membership Tiers Grid */
+.tf-plans-section {
+  padding: 7rem 0;
+  background: var(--tf-surface);
+}
+
+.tf-section-head {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.tf-section-head h2 {
+  font-size: clamp(2.2rem, 4.5vw, 3.5rem);
+  margin-bottom: 0.6rem;
+}
+
+.tf-plans-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2.25rem;
+}
+
+.tf-plan-card {
+  background: var(--tf-surface-card);
+  border: 2px solid var(--tf-border);
+  border-radius: var(--tf-radius-lg);
+  padding: 2.75rem 2.25rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 6px 6px 0px #000000;
+  position: relative;
+}
+
+.tf-plan-card:hover {
+  transform: translateY(-8px);
+  border-color: var(--tf-lime);
+  box-shadow: 0 0 35px rgba(16, 185, 129, 0.25), 10px 10px 0px #000000;
+}
+
+.tf-plan-card.featured {
+  border-color: var(--tf-lime);
+  background: linear-gradient(180deg, #0d1522 0%, #080d16 100%);
+  box-shadow: 0 0 45px rgba(16, 185, 129, 0.3), 10px 10px 0px #000000;
+}
+
+.tf-badge-popular {
+  position: absolute;
+  top: -13px;
+  right: 24px;
+  background: var(--tf-lime);
+  color: #000;
+  font-family: var(--tf-font-mono);
+  font-size: 0.75rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  padding: 0.35rem 0.95rem;
+  border-radius: 999px;
+  border: 1px solid #ffffff;
+  box-shadow: 0 0 15px rgba(16, 185, 129, 0.6);
+}
+
+.tf-plan-price {
+  font-family: var(--tf-font-display);
+  font-size: 3rem;
+  font-weight: 900;
+  color: #ffffff;
+  margin: 1rem 0 0.35rem;
+}
+
+.tf-plan-features {
+  list-style: none;
+  margin: 2rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+  font-size: 0.92rem;
+  color: var(--tf-text-muted);
+}
+
+.tf-plan-features li {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+}
+
+.tf-plan-features li span {
+  color: var(--tf-lime);
+  font-weight: 800;
+}
+
+/* Trainer Roster Cards */
+.tf-trainers-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+}
+
+.tf-trainer-card {
+  background: var(--tf-bg);
+  border: 1px solid var(--tf-border);
+  border-radius: var(--tf-radius-md);
+  overflow: hidden;
+  transition: all 0.3s ease;
+  box-shadow: 6px 6px 0px #000000;
+}
+
+.tf-trainer-card:hover {
+  transform: translateY(-6px);
+  border-color: var(--tf-cyan);
+  box-shadow: 0 0 25px rgba(6, 182, 212, 0.25), 8px 8px 0px #000000;
+}
+
+.tf-trainer-img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  filter: brightness(0.9);
+  transition: transform 0.5s ease;
+}
+
+.tf-trainer-card:hover .tf-trainer-img {
+  transform: scale(1.05);
+}
+
+.tf-trainer-body {
+  padding: 1.75rem;
+}
+
+.tf-trainer-spec {
+  color: var(--tf-cyan-glow);
+  font-family: var(--tf-font-mono);
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 0.35rem;
+}
+
+/* Class Schedule Section */
+.tf-schedule-wrap {
+  padding: 6.5rem 0;
+  background: var(--tf-surface);
+  border-top: 1px solid var(--tf-border);
+}
+
+.tf-schedule-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 2.25rem;
+  background: var(--tf-bg);
+  border-radius: var(--tf-radius-md);
+  overflow: hidden;
+  border: 1px solid var(--tf-border);
+  box-shadow: 6px 6px 0px #000000;
+}
+
+.tf-schedule-table th, .tf-schedule-table td {
+  padding: 1.25rem 1.5rem;
+  text-align: left;
+  border-bottom: 1px solid var(--tf-border);
+}
+
+.tf-schedule-table th {
+  background: var(--tf-surface-elevated);
+  font-family: var(--tf-font-display);
+  font-size: 0.92rem;
+  text-transform: uppercase;
+  color: var(--tf-lime-glow);
+}
+
+/* Footer */
+.tf-footer {
+  background: #020305;
+  border-top: 2px solid var(--tf-border);
+  padding: 4.5rem 0 2.5rem;
+  text-align: center;
+}
+
+@media (max-width: 860px) {
+  .tf-nav-links { display: none; }
+  .tf-top-bar { font-size: 0.72rem; flex-direction: column; gap: 0.35rem; text-align: center; }
+  .tf-hero-grid { grid-template-columns: 1fr; gap: 3rem; }
+  .tf-calc-card { grid-template-columns: 1fr; }
+  .tf-plan-grid { grid-template-columns: 1fr; gap: 2rem; }
+  .tf-trainers-grid { grid-template-columns: 1fr; gap: 2rem; }
+  .tf-schedule-table-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+  .tf-schedule-table { min-width: 520px; }
+  .tf-hero-title { font-size: clamp(2.2rem, 7vw, 3.2rem); }
+}
