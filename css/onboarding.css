@@ -1,0 +1,300 @@
+/* ==========================================================================
+   APEXLOCAL STUDIO — EXPANSIVE NEO-BRUTALIST ONBOARDING STYLES
+   Generous Whitespace | Spacious Step Navigation | Uncrowded Inputs
+   ========================================================================== */
+
+.portal-wrapper {
+  padding: 4.5rem 0 7rem;
+  max-width: 920px;
+  margin: 0 auto;
+}
+
+.portal-card {
+  background-color: var(--bg-secondary);
+  border: 2px solid var(--border-medium);
+  border-radius: var(--radius-md);
+  box-shadow: 8px 8px 0px #000000;
+  overflow: hidden;
+}
+
+/* Stepper Progress Bar with Spacious Padding */
+.stepper-header {
+  background-color: var(--bg-primary);
+  border-bottom: 2px solid var(--border-medium);
+  padding: 2.25rem 3.25rem;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  gap: 2rem;
+}
+
+.step-indicator {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  z-index: 1;
+}
+
+.step-circle {
+  width: 36px;
+  height: 36px;
+  border-radius: var(--radius-sm);
+  background-color: var(--bg-tertiary);
+  border: 2px solid var(--border-medium);
+  box-shadow: 2px 2px 0px #000000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--text-muted);
+  transition: all var(--transition-fast);
+}
+
+/* Active Step */
+.step-indicator.active .step-circle {
+  background-color: var(--accent-teal);
+  border-color: #ffffff;
+  color: #ffffff;
+  box-shadow: 3px 3px 0px var(--accent-teal-glow);
+}
+
+.step-indicator.completed .step-circle {
+  background-color: var(--bg-elevated);
+  border-color: var(--text-primary);
+  color: var(--text-primary);
+}
+
+.step-title {
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.step-indicator.active .step-title {
+  color: var(--text-primary);
+}
+
+/* Form Wizard Body with Ample Breathing Room */
+.wizard-body {
+  padding: 3.5rem 3.25rem;
+}
+
+.wizard-step {
+  display: none;
+}
+
+.wizard-step.active {
+  display: block;
+  animation: fadeInStep 0.2s ease;
+}
+
+@keyframes fadeInStep {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.step-heading {
+  font-family: var(--font-heading);
+  margin-bottom: 0.85rem;
+  font-size: 1.75rem;
+  font-weight: 800;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+}
+
+.step-subheading {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  margin-bottom: 3rem;
+  line-height: 1.8;
+}
+
+/* Choice Grid Options with Generous Gaps */
+.choice-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.75rem;
+  margin-bottom: 2.5rem;
+}
+
+.choice-box {
+  background-color: var(--bg-primary);
+  border: 2px solid var(--border-medium);
+  border-radius: var(--radius-sm);
+  padding: 1.75rem 1.5rem;
+  cursor: pointer;
+  box-shadow: 4px 4px 0px #000000;
+  transition: all var(--transition-fast);
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+}
+
+.choice-box:hover {
+  border-color: var(--text-primary);
+  transform: translate(-3px, -3px);
+  box-shadow: 6px 6px 0px #000000;
+}
+
+/* Selected Choice */
+.choice-box.selected {
+  border-color: var(--accent-teal);
+  background-color: var(--bg-tertiary);
+  box-shadow: 5px 5px 0px var(--accent-teal);
+  transform: translate(-2px, -2px);
+}
+
+.choice-box-title {
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 0.92rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-primary);
+}
+
+.choice-box-desc {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+/* Color Palette Swatches */
+.palette-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1.75rem;
+  margin-bottom: 2.5rem;
+}
+
+.palette-item {
+  background-color: var(--bg-primary);
+  border: 2px solid var(--border-medium);
+  border-radius: var(--radius-sm);
+  padding: 1.25rem;
+  cursor: pointer;
+  box-shadow: 3px 3px 0px #000000;
+  transition: all var(--transition-fast);
+}
+
+.palette-item:hover {
+  border-color: var(--text-primary);
+  transform: translate(-2px, -2px);
+  box-shadow: 5px 5px 0px #000000;
+}
+
+.palette-item.selected {
+  border-color: var(--accent-teal);
+  box-shadow: 5px 5px 0px var(--accent-teal);
+}
+
+.swatch-bar {
+  display: flex;
+  height: 28px;
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  margin-bottom: 0.85rem;
+  border: 2px solid var(--border-medium);
+}
+
+.swatch-color {
+  flex: 1;
+}
+
+.palette-name {
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: center;
+  color: var(--text-primary);
+}
+
+/* Dropzone with Generous Padding */
+.dropzone {
+  border: 2px dashed var(--border-medium);
+  background-color: var(--bg-primary);
+  border-radius: var(--radius-sm);
+  padding: 3rem 2rem;
+  text-align: center;
+  cursor: pointer;
+  box-shadow: 4px 4px 0px #000000;
+  transition: border-color var(--transition-fast), transform var(--transition-fast), box-shadow var(--transition-fast);
+  margin-bottom: 2rem;
+}
+
+.dropzone:hover {
+  border-color: var(--accent-teal);
+  transform: translate(-2px, -2px);
+  box-shadow: 6px 6px 0px var(--accent-teal);
+}
+
+.dropzone-icon {
+  font-size: 2.25rem;
+  margin-bottom: 0.75rem;
+  color: var(--text-muted);
+}
+
+/* Wizard Footer */
+.wizard-footer {
+  background-color: var(--bg-primary);
+  border-top: 2px solid var(--border-medium);
+  padding: 1.75rem 3.25rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Briefing Summary Output */
+.briefing-card {
+  background-color: var(--bg-primary);
+  border: 2px solid var(--border-medium);
+  border-radius: var(--radius-sm);
+  padding: 2.25rem 2rem;
+  font-family: var(--font-mono);
+  font-size: 0.88rem;
+  color: var(--text-primary);
+  max-height: 300px;
+  overflow-y: auto;
+  white-space: pre-wrap;
+  margin-bottom: 2.25rem;
+  line-height: 1.7;
+  box-shadow: 5px 5px 0px #000000;
+}
+
+.success-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  background-color: var(--bg-tertiary);
+  border: 2px solid var(--accent-teal);
+  color: var(--text-primary);
+  padding: 0.65rem 1.25rem;
+  border-radius: var(--radius-sm);
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  box-shadow: 4px 4px 0px var(--accent-teal);
+  margin-bottom: 2rem;
+}
+
+@media (max-width: 640px) {
+  .stepper-header {
+    flex-direction: column;
+    gap: 1.25rem;
+    padding: 1.75rem 1.5rem;
+  }
+  .wizard-body {
+    padding: 2rem 1.5rem;
+  }
+  .wizard-footer {
+    padding: 1.25rem 1.5rem;
+  }
+}
